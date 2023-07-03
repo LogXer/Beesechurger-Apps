@@ -21,9 +21,9 @@ To start using Nebula Media, simply visit our website: [Nebula Media](https://ne
 
 ## Website Interface
 
-![Screenshot 1](https://i.imgur.com/CJP7aIY_d.png?maxwidth=1520&fidelity=grand)
-![Screenshot 2](https://i.imgur.com/ndJ2tnG.png?maxwidth=1520&fidelity=grand)
-![Screenshot 3](https://i.imgur.com/w5QjZCi_d.png?maxwidth=1520&fidelity=grand)
+![Screenshot 1](https://i.imgur.com/w5QjZCi_d.png?maxwidth=1520&fidelity=grand)
+![Screenshot 2](https://i.imgur.com/CJP7aIY_d.png?maxwidth=1520&fidelity=grand)
+![Screenshot 3](https://i.imgur.com/ndJ2tnG.png?maxwidth=1520&fidelity=grand)
 
 ## Roadmap
 
