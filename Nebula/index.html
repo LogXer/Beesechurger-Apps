@@ -62,7 +62,7 @@
   </style>
 </head>
 <body>
-  <iframe id="player-frame" src="https://byt3w1z4rd.github.io/Nebula/player"></iframe>
+  <iframe id="player-frame" src="https://byt3w1z4rd.github.io/Nebula/player.html"></iframe>
 
   <div id="input-container">
     <input type="text" id="title-input" placeholder="Search Media Title">
@@ -88,9 +88,9 @@
             var playerFrame = document.getElementById("player-frame");
             
             if (mediaType === "tv") {
-              playerFrame.src = "https://byt3w1z4rd.github.io/Nebula/player?st=" + tmdbId + "&season=1&episode=1&server=2";
+              playerFrame.src = "https://byt3w1z4rd.github.io/Nebula/player.html?st=" + tmdbId + "&season=1&episode=1&server=2";
             } else {
-              playerFrame.src = "https://byt3w1z4rd.github.io/Nebula/player?mt=" + tmdbId + "&server=2";
+              playerFrame.src = "https://byt3w1z4rd.github.io/Nebula/player.html?mt=" + tmdbId + "&server=2";
             }
           } else {
             console.log("No results found.");
