@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ByteCode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/dracula.min.css" />
+    <style>
+      body {
+        background-color: #20212b;
+        color: #f8f8f2;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 50px;
+      }
+      form {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .button-group {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      button {
+        background-color: #6272a4;
+        color: #f8f8f2;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 10px;
+      }
+      button:hover {
+        background-color: #bd93f9;
+      }
+      .CodeMirror {
+        width: 80%;
+        font-size: 16px;
+        height: auto !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML IDE</h1>
+    <form>
+      <div class="button-group">
+        <button type="button" onclick="beautify()">Beautify</button>
+        <button type="button" onclick="runCode()">Run</button>
+        <button type="button" onclick="download()">Download</button>
+      </div>
+      <textarea id="code" placeholder="Write your code here..."></textarea>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/display/autorefresh.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/dracula.min.js"></script>
+    <script>
+      var codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        mode: "htmlmixed",
+        theme: "dracula",
+        autorefresh: true,
+      });
+
+      function beautify() {
+        var code = codeEditor.getValue();
+        var formattedCode = html_beautify(code);
+        codeEditor.setValue(formattedCode);
+      }
+      
+      function runCode() {
+        var code = codeEditor.getValue();
+        var newTab = window.open('about:blank', '_blank');
+        newTab.document.write(code);
+        newTab.document.close();
+      }
+      
+      function download() {
+        var code = codeEditor.getValue();
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(code));
+        element.setAttribute('download', 'index.html');
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
+  </body>
+</html>
