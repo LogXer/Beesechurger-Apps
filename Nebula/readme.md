@@ -56,4 +56,4 @@ Nebula Media is a non-profit website that relies on user donations to fund furth
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/BYT3W1Z4RD/nebula-media/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/BYT3W1Z4RD/byt3w1z4rd.github.io/blob/main/LICENSE).
