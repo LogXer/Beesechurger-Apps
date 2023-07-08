@@ -23,16 +23,16 @@ We are continuously working on improving Forecaster and adding new features to e
 
 ## Feedback and Support
 
-We value your feedback and strive to provide the best experience possible. If you have any questions, suggestions, or encounter any issues while using Forecaster, please don't hesitate to reach out to our support team at [Forecaster Support](mailto:support@forecaster.com).
+We value your feedback and strive to provide the best experience possible. If you have any questions, suggestions, or encounter any issues while using Forecaster, please don't hesitate to reach out to our support team at [Forecaster Support](mailto:byt3w1z4rd@proton.me).
 
 Your feedback plays a crucial role in shaping the future of Forecaster. We appreciate your input and will actively consider your suggestions for upcoming updates.
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/forecaster/forecaster/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/BYT3W1Z4RD/byt3w1z4rd.github.io/blob/main/LICENSE).
 
 Your support and contributions are vital in helping us maintain and improve Forecaster. If you find Forecaster useful and would like to contribute to its development and maintenance, consider making a donation. Your generosity enables us to deliver high-quality weather forecasting services to users worldwide.
 
-[![Donate to Forecaster](https://img.shields.io/badge/Donate-Donate%20to%20Forecaster-blue.svg)](https://www.buymeacoffee.com/forecaster)
+<a href="https://www.buymeacoffee.com/BYT3W1Z4RD" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Donate%20To Forecaster&button_colour=121212&font_colour=ffffff&font_family=Inter&outline_colour=980fff&coffee_colour=980fff"></a>
 
 We sincerely appreciate your support, and every donation brings us closer to achieving our mission of providing accurate and reliable weather forecasts to all.
