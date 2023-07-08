@@ -39,4 +39,4 @@ Bytecode is a non-profit project that relies on user donations to fund further d
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/BYT3W1Z4RD/bytecode/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/BYT3W1Z4RD/byt3w1z4rd.github.io/blob/main/LICENSE).
