@@ -22,4 +22,4 @@ Forecaster is a weather forecast website that provides accurate and up-to-date w
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/BYT3W1Z4RD/nebula-media/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/BYT3W1Z4RD/byt3w1z4rd.github.io/blob/main/LICENSE).
