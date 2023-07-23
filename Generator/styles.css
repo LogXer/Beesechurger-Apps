@@ -4,7 +4,7 @@
   --text-color: #333;
   --background-color: #f7f7f7;
   --white: #fff;
-  --light-grey: #ddd;  /* Added for borders and other light elements */
+  --light-grey: #ddd;  
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -14,7 +14,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
-  color: var(--text-color);  /* Setting default text color */
+  color: var(--text-color);  
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
@@ -62,7 +62,7 @@ body {
 input[type="number"] {
   padding: 10px;
   font-size: 16px;
-  border: 2px solid var(--light-grey);  /* Used variable for color */
+  border: 2px solid var(--light-grey); 
   border-radius: 5px;
   width: 45%;
 }
@@ -116,7 +116,7 @@ button:hover {
 
 #historyList li {
   background: var(--white);
-  border: 1px solid var(--light-grey);  /* Used variable for color */
+  border: 1px solid var(--light-grey);  
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
