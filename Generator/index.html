@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Generator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="generator">
+      <h2>Random Number Generator</h2>
+      <div class="input-container">
+        <label for="minValue">Minimum value:</label>
+        <input type="number" id="minValue" value="1">
+      </div>
+      <div class="input-container">
+        <label for="maxValue">Maximum value:</label>
+        <input type="number" id="maxValue" value="100">
+      </div>
+      <div class="input-container">
+        <label for="numValues">Number of values:</label>
+        <input type="number" id="numValues" value="1" min="1">
+      </div>
+      <button id="generate">Generate Random Number(s)</button>
+      <div id="randomNumbersContainer"></div>
+    </div>
+    <div id="history">
+      <h3>History</h3>
+      <div class="input-container">
+        <label for="historyLimit">History limit:</label>
+        <input type="number" id="historyLimit" value="50" min="1">
+      </div>
+      <button id="download">Download History</button>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
