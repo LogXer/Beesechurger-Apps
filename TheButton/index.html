@@ -79,7 +79,7 @@ function createParticle(x, y) {
     var velX = Math.cos(direction) * speed;
     var velY = Math.sin(direction) * speed;
 
-    var ttl = 100; // Time to live
+    var ttl = 100; 
 
     var particleEffect = setInterval(function() {
         ttl--;
@@ -91,7 +91,7 @@ function createParticle(x, y) {
             particle.remove();
             clearInterval(particleEffect);
         }
-    }, 1000 / 60); // Run 60 times a second
+    }, 1000 / 60); 
 }
 </script>
 
