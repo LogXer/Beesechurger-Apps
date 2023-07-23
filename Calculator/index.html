@@ -1,109 +1,104 @@
 <!DOCTYPE html>
-<html data-theme="dark">
-    <head>
-        <title>Home</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <style>
-            :root {
-                --main-bg-color: #f0f0f0;
-                --main-text-color: #333;
-                --secondary-text-color: #666;
-                --subtext-color: #999;
-                --link-color: #007BFF;
-                --link-hover-color: #0056b3;
-            }
-            [data-theme="dark"] {
-                --main-bg-color: #333;
-                --main-text-color: #f0f0f0;
-                --secondary-text-color: #bbb;
-                --subtext-color: #888;
-                --link-color: #33a8ff;
-                --link-hover-color: #0088cc;
-            }
-            body {
-                font-family: 'Montserrat', Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: var(--main-bg-color);
-                color: var(--main-text-color);
-                transition: background-color .5s, color .5s;
-            }
-            .container {
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-            h1, h2 {
-                color: var(--main-text-color);
-            }
-            p {
-                color: var(--secondary-text-color);
-            }
-            .subtext {
-                color: var(--subtext-color);
-                font-size: 0.85em;
-                margin-top: -10px;
-            }
-            .link {
-                display: inline-block;
-                margin-top: 10px;
-                padding: 10px;
-                border-radius: 5px;
-                background-color: var(--link-color);
-                color: white;
-                text-decoration: none;
-                transition: background-color .3s;
-            }
-            .link:hover {
-                background-color: var(--link-hover-color);
-            }
-            .toggle-theme {
-                position: fixed;
-                top: 10px;
-                right: 10px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>Welcome to Beesechurger Apps!</h1>
-            <p>This page has multiple applications to browse, feel free to pick one! :)</p>
+<html>
+<head>
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-            <div>
-                <h2>Beesechurger Movies</h2>
-                <p class="subtext">Beesechurger Movies is an easy to use movie site which allows access to 100,000+ movies for free.</p>
-                <p><a class="link" href="/Nebula/index.html">Go to Beesechurger Movies page</a></p>
-            </div>
-
-            <div>
-                <h2>Beesechurger Forecaster</h2>
-                <p class="subtext">Beesechurger Forecaster is an easy way to check the forecast.</p>
-                <p><a class="link" href="/Forecaster/index.html">Go to Beesechurger Forecaster page</a></p>
-            </div>
-
-            <div>
-                <h2>BeesechurgerCode: an IDE</h2>
-                <p class="subtext">An easy online IDE with options to make coders cream with excitement. (minus the cream)</p>
-                <p><a class="link" href="/Bytecode/index.html">Go to BeesechurgerCode page</a></p>
-            </div>
-
-            <div>
-                <h2>Beesechurger Calculator</h2>
-                <p class="subtext">Beesechurger Calculator with Random Stock Photo Background lmao</p>
-                <p><a class="link" href="/Calculator/index.html">Go to Beesechurger Calculator page
-                </a></p>
-            </div>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url(https://source.unsplash.com/1920x1080?math) no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .calculator {
+            width: 400px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(230, 230, 230, 0.9));
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+        }
+        .calculator input {
+            width: 100%;
+            padding: 10px;   /* Reduced padding from 20px to 10px */
+            margin-bottom: 20px;
+            font-size: 20px; /* Reduced font size from 24px to 20px */
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .calculator button {
+            cursor: pointer;
+            background: linear-gradient(to right, #1c6ef2, #185bcf);
+            color: white;
+            border: none;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: transform 0.1s ease;
+            padding: 10px;
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+            margin: 5px;
+        }
+        .calculator button:active {
+            transform: scale(0.98);
+        }
+        .calculator .keys {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .calculator button.clear-btn {
+            background: linear-gradient(to right, #f44336, #da190b);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input id="expression" type="text" readonly />
+        <div class="keys">
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('/')">/</button>
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('*')">*</button>
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('-')">-</button>
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="append('+')">+</button>
+            <button onclick="clearExpression()" class="clear-btn"><i class="fas fa-backspace"></i></button>
         </div>
-        <div class="toggle-theme">👁️</div>
-        <script>
-            const toggleThemeButton = document.querySelector('.toggle-theme');
-            toggleThemeButton.addEventListener('click', () => {
-                document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-            });
-        </script>
-    </body>
+        <input id="result" type="text" readonly />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
+    <script>
+        function append(number) {
+            document.getElementById('expression').value += number;
+        }
+
+        function calculate() {
+            var expression = document.getElementById('expression').value;
+            var result = math.evaluate(expression);
+            document.getElementById('result').value = result;
+        }
+
+        function clearExpression() {
+            document.getElementById('expression').value = '';
+            document.getElementById('result').value = '';
+        }
+    </script>
+</body>
 </html>
