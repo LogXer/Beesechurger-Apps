@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.particle {
+  position: absolute;
+  background-color: #4CAF50;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+<button class="button" id="myButton">Click Me!</button>
+
+<audio id="fartSound" src="fart.mp3" preload="auto"></audio>
+
+<script>
+document.getElementById('myButton').addEventListener('mousedown', function(e) {
+    var audio = document.getElementById('fartSound');
+    audio.currentTime = 0;
+    audio.play();
+
+    for (var i = 0; i < 30; i++) {
+        createParticle(e.clientX, e.clientY);
+    }
+});
+
+function createParticle(x, y) {
+    var particle = document.createElement('div');
+    document.body.appendChild(particle);
+    particle.classList.add('particle');
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+
+    var speed = Math.random() * 5;
+    var direction = Math.random() * Math.PI * 2;
+
+    var velX = Math.cos(direction) * speed;
+    var velY = Math.sin(direction) * speed;
+
+    var ttl = 100; // Time to live
+
+    var particleEffect = setInterval(function() {
+        ttl--;
+        particle.style.top = `${parseFloat(particle.style.top) + velY}px`;
+        particle.style.left = `${parseFloat(particle.style.left) + velX}px`;
+        particle.style.opacity = ttl / 100;
+
+        if (ttl <= 0) {
+            particle.remove();
+            clearInterval(particleEffect);
+        }
+    }, 1000 / 60); // Run 60 times a second
+}
+</script>
+
+</body>
+</html>
