@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+    <head>
+        <title>Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --main-bg-color: #f0f0f0;
+                --main-text-color: #333;
+                --secondary-text-color: #666;
+                --subtext-color: #999;
+                --link-color: #007BFF;
+                --link-hover-color: #0056b3;
+            }
+            [data-theme="dark"] {
+                --main-bg-color: #333;
+                --main-text-color: #f0f0f0;
+                --secondary-text-color: #bbb;
+                --subtext-color: #888;
+                --link-color: #33a8ff;
+                --link-hover-color: #0088cc;
+            }
+            body {
+                font-family: 'Montserrat', Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: var(--main-bg-color);
+                color: var(--main-text-color);
+                transition: background-color .5s, color .5s;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            h1, h2 {
+                color: var(--main-text-color);
+            }
+            p {
+                color: var(--secondary-text-color);
+            }
+            .subtext {
+                color: var(--subtext-color);
+                font-size: 0.85em;
+                margin-top: -10px;
+            }
+            .link {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: var(--link-color);
+                color: white;
+                text-decoration: none;
+                transition: background-color .3s;
+            }
+            .link:hover {
+                background-color: var(--link-hover-color);
+            }
+            .toggle-theme {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to Beesechurger Apps!</h1>
+            <p>This page has multiple applications to browse, feel free to pick one! :)</p>
+
+            <div>
+                <h2>Beesechurger Movies</h2>
+                <p class="subtext">Beesechurger Movies is an easy to use movie site which allows access to 100,000+ movies for free.</p>
+                <p><a class="link" href="/Nebula/index.html">Go to Beesechurger Movies page</a></p>
+            </div>
+
+            <div>
+                <h2>Beesechurger Forecaster</h2>
+                <p class="subtext">Beesechurger Forecaster is an easy way to check the forecast.</p>
+                <p><a class="link" href="/Forecaster/index.html">Go to Beesechurger Forecaster page</a></p>
+            </div>
+
+            <div>
+                <h2>BeesechurgerCode: an IDE</h2>
+                <p class="subtext">An easy online IDE with options to make coders cream with excitement. (minus the cream)</p>
+                <p><a class="link" href="/Bytecode/index.html">Go to BeesechurgerCode page</a></p>
+            </div>
+
+            <div>
+                <h2>Beesechurger Calculator</h2>
+                <p class="subtext">Beesechurger Calculator with Random Stock Photo Background lmao</p>
+                <p><a class="link" href="/Calculator/index.html">Go to Beesechurger Calculator page
+                </a></p>
+            </div>
+        </div>
+        <div class="toggle-theme">👁️</div>
+        <script>
+            const toggleThemeButton = document.querySelector('.toggle-theme');
+            toggleThemeButton.addEventListener('click', () => {
+                document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+            });
+        </script>
+    </body>
+</html>
