@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-white min-h-screen flex items-center justify-center">
+    <div id="app" class="w-full max-w-md">
+        <h2 class="text-3xl mb-8 text-center">Beesechurger Password Generator</h2>
+        <div class="mb-4">
+            <label class="block">Password Length</label>
+            <input type="number" v-model="length" min="8" max="128" class="w-full px-3 h-10 bg-gray-700 rounded">
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <label v-for="(value, key) in checkboxValues" :key="key" class="flex items-center">
+                <input type="checkbox" v-model="value.checked" class="mr-2">
+                {{ value.label }}
+            </label>
+        </div>
+        <button @click="generate" class="w-full bg-indigo-500 text-white py-2 rounded mb-4">Generate Password</button>
+        <input type="text" v-model="password" class="w-full px-3 h-10 bg-gray-700 rounded mb-4" readonly>
+        <button @click="copyToClipboard" class="w-full bg-green-500 text-white py-2 rounded">Copy to Clipboard</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+</html>
