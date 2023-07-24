@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beesechurger IP Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/IPGen/styles.css">
+</head>
+<body>
+    <main class="container">
+        <section>
+            <h1>Beesechurger IP Generator</h1>
+            <p>Generate random verified IP addresses for testing network activities or simulating different IP addresses. You can check the validity of the IP addresses by going to https://members.ip-api.com/</p>
+        </section>
+
+        <fieldset class="radio-container">
+            <legend>Select IP type</legend>
+            <input type="radio" id="ipv4" name="ip-type" value="ipv4" checked>
+            <label for="ipv4">IPv4</label>
+            <input type="radio" id="ipv6" name="ip-type" value="ipv6">
+            <label for="ipv6">IPv6</label>
+        </fieldset>
+
+        <section>
+            <input type="text" id="ip-address" readonly>
+            <button class="btn" id="generate-btn">Generate</button>
+        </section>
+    </main>
+
+    <script src="/IPGen/script.js"></script>
+</body>
+</html>
