@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #f8f9fa;
+    --secondary-color: #212529;
+    --btn-color: #6c757d;
+    --font-family: 'Montserrat', sans-serif;
+    --border-radius: 4px;
+    --radio-color: #6c757d;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.radio-container label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.radio-container label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--radio-color);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.radio-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-container input[type="radio"]:checked ~ label::after {
+    background-color: var(--radio-color);
+}
+
+.btn {
+    background-color: var(--btn-color);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+#ip-address {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--btn-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+label {
+    font-weight: 600;
+    color: var(--btn-color);
+}
