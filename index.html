@@ -4,7 +4,6 @@
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS variables */
         :root {
             --main-bg-color: #f0f0f0;
             --main-text-color: #333;
@@ -14,7 +13,6 @@
             --link-hover-color: #0056b3;
         }
 
-        /* Dark Theme */
         [data-theme="dark"] {
             --main-bg-color: #333;
             --main-text-color: #f0f0f0;
@@ -24,7 +22,6 @@
             --link-hover-color: #0088cc;
         }
 
-        /* General styles */
         body {
             font-family: 'Montserrat', Arial, sans-serif;
             margin: 0;
@@ -34,7 +31,6 @@
             transition: background-color .5s, color .5s;
         }
 
-        /* Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -42,26 +38,23 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            text-align: center; /* New line added */
         }
 
-        /* Headings */
         h1, h2 {
             color: var(--main-text-color);
         }
 
-        /* Paragraphs */
         p {
             color: var(--secondary-text-color);
         }
 
-        /* Subtext */
         .subtext {
             color: var(--subtext-color);
             font-size: 0.85em;
             margin-top: -10px;
         }
 
-        /* Links */
         .link {
             display: inline-block;
             margin-top: 10px;
@@ -77,7 +70,6 @@
             background-color: var(--link-hover-color);
         }
 
-        /* Toggle Theme */
         .toggle-theme {
             position: fixed;
             top: 10px;
@@ -122,7 +114,7 @@
         <!-- Beesechurger Notepad -->
         <div>
             <h2>Beesechurger Notepad</h2>
-            <p class="subtext">Beesechurger Notepad is asimple and easy to use text editor with full support for bold, italics and underlining and .txt support.</p>
+            <p class="subtext">Beesechurger Notepad is a simple and easy to use text editor.</p>
             <p><a class="link" href="/Notepad/index.html">Go to Beesechurger Notepad page</a></p>
         </div>
 
@@ -133,18 +125,23 @@
             <p><a class="link" href="/Generator/index.html">Go to Beesechurger Random Number Generator page</a></p>
         </div>
 
-         <!-- The Button -->
+        <!-- The Button -->
         <div>
             <h2>The Button</h2>
             <p class="subtext">The Button is a simple web application that provides a button for users to interact with. Click it to see what happens!</p>
             <p><a class="link" href="/TheButton/index.html">Go to The Button page</a></p>
         </div>
+
+        <!-- Beesechurger Hourglass -->
+        <div>
+            <h2>Beesechurger Hourglass</h2>
+            <p class="subtext">Beesechurger Hourglass is a stunningly simple yet mesmerizing application that lets you watch time pass in a beautiful, virtual hourglass. Perfect for timing short activities or just enjoying the aesthetic.</p>
+            <p><a class="link" href="/Hourglass/index.html">Go to Beesechurger Hourglass page</a></p>
+        </div>
     </div>
 
-    <!-- Toggle Theme Button -->
     <div class="toggle-theme">Dark Mode 👁️</div>
 
-    <!-- JavaScript -->
     <script>
         const toggleThemeButton = document.querySelector('.toggle-theme');
         toggleThemeButton.addEventListener('click', () => {
