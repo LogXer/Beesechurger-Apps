@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beesechurger Encryption Tool</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card {
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-weight: 700;
+        }
+        button {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card rounded-lg p-4">
+                    <h1 class="mb-4 text-center">Beesechurger Encryption Tool</h1>
+                    
+                    <div class="mb-4">
+                        <button class="btn btn-primary w-100 mb-2" id="generate">Generate Key</button>
+                        <button class="btn btn-primary w-100 mb-2" id="download">Download Key</button>
+                        <label for="import" class="form-label mt-2">Import Key</label>
+                        <input type="file" id="import" class="form-control">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="file" class="form-label">Upload File</label>
+                        <input type="file" id="file" class="form-control">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="method" class="form-label">Select Method</label>
+                        <select id="method" class="form-control">
+                            <option value="AES-GCM">AES-GCM</option>
+                            <option value="AES-CBC">AES-CBC</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="key-length" class="form-label">Select Key Length</label>
+                        <select id="key-length" class="form-control mb-3">
+                            <option value="128">128-bit</option>
+                            <option value="192">192-bit</option>
+                            <option value="256">256-bit</option>
+                        </select>
+                    </div>
+
+                    <div id="processing" class="alert alert-info d-none">Processing...</div>
+
+                    <button class="btn btn-danger w-100 mt-3" id="clear-key">Clear Key</button>
+
+                    <div class="form-group mt-4">
+                        <label for="input" class="form-label">Input</label>
+                        <textarea id="input" class="form-control" rows="3" placeholder="Enter text to encrypt or decrypt"></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                        <button class="btn btn-primary me-md-2" id="encrypt">Encrypt</button>
+                        <button class="btn btn-primary" id="decrypt">Decrypt</button>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="output" class="form-label">Output</label>
+                        <textarea id="output" class="form-control" rows="3" placeholder="Encrypted or decrypted text will appear here"></textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+                        <button class="btn btn-secondary" id="copy-output">Copy to Clipboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
