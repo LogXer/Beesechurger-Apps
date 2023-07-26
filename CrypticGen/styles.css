@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.custom-file-label::after {
+    content: "Browse";
+}
+
+textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+}
+
+.btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.fade-in {
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
