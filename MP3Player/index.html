@@ -1,1 +1,28 @@
-change
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Player</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="audioPlayer">
+        <input type="file" id="audio-file-input" accept="audio/*" multiple hidden>
+        <label for="audio-file-input" id="uploadLabel">
+            <span>Choose Files</span>
+        </label>
+        <audio id="audio" controls></audio>
+        <div id="controls">
+            <button class="prev">Prev</button>
+            <button class="play">Play</button>
+            <button class="next">Next</button>
+            <button class="shuffle">Shuffle</button>
+            <button class="repeat">Repeat</button>
+            <button class="dark-mode-toggle">👁️</button>
+        </div>
+        <div id="loadingIndicator" style="visibility: hidden;">Loading...</div>
+        <div class="current-song-title"></div>
+        <div class="playlist"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
