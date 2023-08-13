@@ -49,12 +49,12 @@
             color: var(--main-text-color);
             font-size: 2em;
             font-weight: 700;
-            margin: 40px 0 60px 0;  /* Updated margin */
+            margin: 40px 0 60px 0; 
         }
         p {
             color: var(--secondary-text-color);
             font-size: 1em;
-            line-height: 1.8;  /* Updated line-height */
+            line-height: 1.8;  
             margin: 10px 0;
         }
         .subtext {
@@ -65,7 +65,7 @@
         .link {
             display: inline-block;
             margin-top: 15px;
-            padding: 15px 20px; /* Updated padding */
+            padding: 15px 20px;
             border-radius: 5px;
             background-color: var(--link-color);
             color: white;
@@ -111,7 +111,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- alt attribute added for better accessibility -->
         <img alt="Beesechurger logo" src="beesechurger.png">
         <h1>Welcome to Beesechurger Apps!</h1>
         <p>This page has multiple applications to browse, feel free to pick one!</p>
@@ -119,7 +118,7 @@
 		<div>
 			<h3>Beesechurger Movies</h2>
 			<p class="subtext">Beesechurger Movies is an easy to use movie site which allows access to 100,000+ movies for absoulutely free with little-to-no ads.</p>
-			<p><a class="link" href="/Nebula/index.html">Go to Beesechurger Movies page</a></p>
+			<p><a class="link" href="/BeesechurgerMovies/index.html">Go to Beesechurger Movies page</a></p>
 		</div>
 		<div>
 			<h3>Beesechurger Forecaster</h2>
@@ -129,7 +128,7 @@
 		<div>
 			<h3>BeesechurgerCode: an IDE</h2>
 			<p class="subtext">An easy online IDE with options to make any HTML project easy to run and bug-test.</p>
-			<p><a class="link" href="/Bytecode/index.html">Go to BeesechurgerCode page</a></p>
+			<p><a class="link" href="/BeesechurgerCode/index.html">Go to BeesechurgerCode page</a></p>
 		</div>
 		<div>
 			<h3>Beesechurger Calculator</h2>
@@ -167,23 +166,26 @@
 			<p><a class="link" href="/IPGen/index.html">Go to Beesechurger IP Generator page</a></p>
 		</div>
 		<div>
-			<h3>Beesechurger CrypticGen</h2>
-			<p class="subtext">Beesechurger CrypticGen is a powerful tool for cryptographic operations. It allows you to encrypt, decrypt, and perform other cryptographic functions with ease and security.</p>
-			<p><a class="link" href="/CrypticGen/index.html">Go to Beesechurger CrypticGen page</a></p>
-		</div>
-	</div>
-	<div class="toggle-theme">
-		Dark Mode 👁️
-	</div>
-	<script>
-	   const toggleThemeButton = document.querySelector('.toggle-theme');
-	   toggleThemeButton.addEventListener('click', () => {
-	       if (document.documentElement.getAttribute('data-theme') === 'dark') {
-	           document.documentElement.setAttribute('data-theme', 'light');
-	       } else {
-	           document.documentElement.setAttribute('data-theme', 'dark');
-	       }
-	   });
-	</script>
-</body>
-</html>
+    <h3>Beesechurger CrypticGen</h3>
+    <p class="subtext">Beesechurger CrypticGen is a powerful tool for cryptographic operations. It allows you to encrypt, decrypt, and perform other cryptographic functions with ease and security.</p>
+    <p><a class="link" href="/CrypticGen/index.html">Go to Beesechurger CrypticGen page</a></p>
+</div>
+<div>
+    <h3>Beesechurger MP3 Player</h3>
+    <p class="subtext">The Beesechurger MP3 Player is a simple and intuitive music player that lets you enjoy your favorite tunes anywhere, anytime.</p>
+    <p><a class="link" href="/MP3Player/index.html">Go to Beesechurger MP3 Player page</a></p>
+</div>
+<div class="toggle-theme">Dark Mode 👁️</div>
+</div>
+<script>
+   const toggleThemeButton = document.querySelector('.toggle-theme');
+   toggleThemeButton.addEventListener('click', () => {
+       if (document.documentElement.getAttribute('data-theme') === 'dark') {
+           document.documentElement.setAttribute('data-theme', 'light');
+       } else {
+           document.documentElement.setAttribute('data-theme', 'dark');
+       }
+   });
+</script>
+<body>
+<html>
