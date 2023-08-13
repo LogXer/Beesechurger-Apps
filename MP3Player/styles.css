@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4a4c4f;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#audioPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow:  20px 20px 60px #535050, -20px -20px 60px #413e3e;
+    padding: 40px;
+    background: #35383b;
+    max-width: 600px;
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#uploadLabel {
+    display: inline-block;
+    background: #bbc0c4;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow:  5px 5px 15px #a3a9af, -5px -5px 15px #ffffff;
+    margin-bottom: 40px;
+}
+
+#uploadLabel:hover {
+    box-shadow: inset 2px 2px 2px #a3a9af, inset -2px -2px 2px #ffffff;
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+button {
+    cursor: pointer;
+    background: #626464;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    box-shadow:  5px 5px 15px #a3a9af, -5px -5px 15px #6b6b6b;
+}
+
+button:hover {
+    box-shadow: inset 2px 2px 2px #a3a9af, inset -2px -2px 2px #827d7d;
+}
+
+#playlist {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.playlistItem {
+    padding: 20px;
+    border: 1px solid #a39f9f;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow:  5px 5px 15px #a3a9af, -5px -5px 15px #8d8b8b;
+}
+
+.playlistItem:hover {
+    box-shadow: inset 2px 2px 2px #a3a9af, inset -2px -2px 2px #ffffff;
+}
+
+.playlistItem.active {
+    background-color: #339be1;
+}
+
+@media (max-width: 600px) {
+    #audioPlayer {
+        width: 90%;
+    }
+}
+
+body.dark, #audioPlayer.dark {
+    background-color: #333;
+    color: #e0e5ec;
+}
+
+#audioPlayer.dark button, #audioPlayer.dark #uploadLabel {
+    background: #555;
+    box-shadow:  5px 5px 15px #222, -5px -5px 15px #444;
+}
+
+#audioPlayer.dark button:hover, #uploadLabel.dark:hover {
+    box-shadow: inset 2px 2px 2px #222, inset -2px -2px 2px #444;
+}
+
+.playlistItem.dark {
+    border-color: #444;
+    box-shadow:  5px 5px 15px #222, -5px -5px 15px #444;
+}
+
+.playlistItem.dark:hover {
+    box-shadow: inset 2px 2px 2px #222, inset -2px -2px 2px #444;
+}
+
+.playlistItem.active.dark {
+    background-color: #444;
+}
